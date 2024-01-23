@@ -53,6 +53,10 @@ Finally, run the application via `yarn start`. The application will be available
 ```
 yarn start --host localhost --port 3000
 ```
+or to be accesible from of any host in the LAN:
+```
+yarn start --host 0.0.0.0 --port 3000
+```
 
 > Note: Currently, we recommend using `localhost` during local development of your backend and frontend to avoid CORS "Same-Origin" issues.
 
