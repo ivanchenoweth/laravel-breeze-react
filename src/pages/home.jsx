@@ -6,11 +6,13 @@ import ApplicationLogo from 'components/ApplicationLogo';
 function Home() {
   const { user } = useAuth({ middleware: 'guest' });
 
+  console.log(user,"user");
+  console.log(process.env.REACT_APP_WEBSITE_NAME,"REACT_APP_WEBSITE_NAME");
+  console.log(process.env.REACT_APP_WEBSITE_NAME,"REACT_APP_WEBSITE_NAME");
   return (
     <div className="relative flex items-top justify-center
     min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
       <div className="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-        {user ?
           <NavLink
             to="/dashboard"
             className="ml-4 text-sm text-gray-700 underline"
@@ -32,7 +34,7 @@ function Home() {
               Register
             </NavLink>
           </>
-        }
+
       </div>
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-center pt-8 sm:justify-start sm:pt-0">

@@ -12,9 +12,10 @@ export const useAuth = () => {
             .post('/login', props)
             .then(() => {
                   setSuccessResponse();
-                  navigate('/dashboard');
+                  navigate('/dashboard2');
               })
             .catch(error => {
+                navigate('/dashboard3');
                 setErrors(error);
             })
     }
